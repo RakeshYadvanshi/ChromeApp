@@ -1,0 +1,12 @@
+.Makehand{
+cursor: pointer;
+margin-right:10px;
+opacity:0.2;
+}
+.removeActive{
+opacity:1;
+}
+.makeComplete
+{
+  text-decoration:line-through;
+}
