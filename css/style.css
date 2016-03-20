@@ -449,3 +449,6 @@ margin:     60px auto 100px;
 .Makehand{
 cursor: pointer;
 }
+body{
+    background-color: #fafafa !important;
+}

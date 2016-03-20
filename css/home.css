@@ -10,3 +10,7 @@ opacity:1;
 {
   text-decoration:line-through;
 }
+
+body{
+    background-color: #fafafa !important;
+}
