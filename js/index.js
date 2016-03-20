@@ -1,3 +1,19 @@
+window.OpenForm= function(value){
+     chrome.app.window.create(value, {
+    id: 'Home',
+    bounds: { width: 1366, height:768 }
+  });
+ 
+};
+
+window.closeForm=function(value){
+     //close the main window
+  chrome.app.window.get(value).close();
+    
+};
+
+
+
 $('.toggle').on('click', function() {
      $("#myicon").hide();
   $('.container').stop().addClass('active');
@@ -19,6 +35,8 @@ $('#SubmitUser').on('click', function() {
     "Password":$("#RPassword").val()},
     function(){
       console.log("User Succesfully Saved");
+OpenForm("home.html");
+closeForm("main");   
     });
   }
 });
@@ -36,15 +54,9 @@ var UserData;
   && $("#Password").val()==UserData.Password)
   {
     console.log("User Succesfully Saved");
-    
-    chrome.app.window.create('Home.html', {
-    id: 'Home',
-    bounds: { width: 1366, height:768 }
-  });
-  //close the main window
-  chrome.app.window.get("main").close();
-    
-    
+    OpenForm("home.html");
+closeForm("main");
+ 
   }
   else
   {
@@ -55,7 +67,7 @@ var UserData;
     });
 });
 $(function(){
-    $('.toggle').html('<img id="myicon" src="25688.svg" height="40px" width="40px" style="margin-bottom:3px" >');
+    $('.toggle').html('<img id="myicon" src="img/25688.svg" height="40px" width="40px" style="margin-bottom:3px" >');
     
     $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus();

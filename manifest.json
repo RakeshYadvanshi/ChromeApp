@@ -3,7 +3,7 @@
   "name": "OfflineJson",
   "version": "1",
   "icons": {
-    "128": "icon_128.png"
+    "128": "img/logo.png"
   },
   "permissions": ["storage"],
   "app": {

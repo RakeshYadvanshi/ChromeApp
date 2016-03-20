@@ -3,14 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Mobile App</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/home.css">
-    
      </head>
 
   <body>
-
-
 <div class="container">
           <div class="row">
             <div class="col-md-4"> </div>
@@ -18,23 +15,46 @@
             <div class="col-md-4"> </div>
           </div>
     <div class="row">
-        <div class="col-md-2"> </div>
-        <div class="col-md-8">
+        <div class="col-md-3">
+<div class="list-group">
+  <button type="button" id="SaveItems" class="list-group-item list-group-item-success">Save Working List</button>
+  <button type="button" class="list-group-item list-group-item-success">Activate Alarm</button>
+  <button type="button" class="list-group-item list-group-item-success">Export to File</button>
+  <button type="button" class="list-group-item list-group-item-success">Import From File</button>
+  <button type="button"  class="list-group-item list-group-item-success">Delete Completed Task</button>
+<button type="button" id="completeAll" class="list-group-item list-group-item-success">Mark As Complete  All</button>
+<button type="button" id="pendingAll" class="list-group-item list-group-item-success">Mark As Pending  All </button>
+<button type="button" id="deleteAll" class="list-group-item list-group-item-success ">Delete All </button>
+
+</div>
+
+<div id="alert" class="alert alert-success" role="alert" style="display:block">
+   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span></button>
+Message Box
+
+</div>
+
+
+          </div>
+        <div class="col-md-9">
             <div class="input-group input-group-lg">
-                <span class="input-group-addon" id="sizing-addon1">*</span>
-                <input id="txtValue" type="text" class="form-control" placeholder="Add To Do Job" aria-describedby="sizing-addon1">
-              </div> 
+                <span class="input-group-addon"><img src="img/signcheck.png"  class="Makehand"></span>
+                <input id="txtValue" type="text" class="form-control" placeholder="Add To Do Job">
+              </div>  
               <br>
+              
               <ul class="list-group" id="todoList">
               
               </ul>
-           </div>
-        <div class="col-md-2"> </div>
+             
+        </div>
     </div>
 </div>
-
     <script src='js/jquery-1.12.1.js'></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/store.js"></script>
     <script src="js/home.js"></script>
   </body>
 </html>
